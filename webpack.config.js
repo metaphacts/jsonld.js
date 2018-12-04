@@ -64,10 +64,10 @@ outputs.forEach((info) => {
           test: /\.js$/,
           include: [{
             // exclude node_modules by default
-            exclude: /(node_modules)/
+            exclude: path.resolve(__dirname, 'node_modules')
           }, {
             // include rdf-canonize
-            include: /(node_modules\/rdf-canonize)/
+            include: path.resolve(__dirname, 'node_modules/rdf-canonize')
           }],
           use: {
             loader: 'babel-loader',
